@@ -1,18 +1,3 @@
-# ENV2FS [![](https://badge.imagelayers.io/dweomer/env2fs:latest.svg)](https://imagelayers.io/?images=dweomer/env2fs:latest 'Get your own badge on imagelayers.io')
-
-Facilitate single-file compositions by parsing the environment for variables that look like file paths and storing the value of such on the local filesystem.
-
-## Usage
-### `docker run`
-
-```
-$ docker run --rm -it -e '/tmp/hello=world' dweomer/env2fs cat /tmp/hello
-world
-```
-
-### [`docker-compose`](src/test/compose)
-
-```
 #!/bin/bash
 cat - << EOF | docker-compose -f - up
 lorem:
@@ -29,4 +14,4 @@ lorem:
         versions of Lorem Ipsum.
   image: dweomer/env2fs
 EOF
-```
+
